@@ -6,8 +6,8 @@ const bodyParser = require("body-parser");
 
 app.use(express.json());
 
-app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ entended: false }));
+// app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ entended: false }));
 
 app.get("/", (req, res) => {
   res.send(`<h1>Hello ${user}, Now You Can Create API Using Express1.<h1>`);
