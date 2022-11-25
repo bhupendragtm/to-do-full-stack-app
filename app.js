@@ -79,8 +79,8 @@ app.delete("/todos/:id", (request, response) => {
     if (error) {
       throw error;
     }
-    console.log(results.rowCount);
-    response.status(200).send(`Blog deleted with name TITLE: ${id}`);
+    console.log(results.rowCount + ` Deleted id is: ${id} ` + results.rowCount);
+    response.status(200).send(`Blog deleted with name TITLE: '${id}'   `);
   });
 });
 app.listen(port, () => {
