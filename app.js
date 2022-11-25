@@ -34,7 +34,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/todos", (request, response) => {
-  client.query(`SELECT * FROM todos ORDER BY id ASC`, (error, results) => {
+  client.query(`SELECT * FROM todos ORDER BY id DESC`, (error, results) => {
     if (error) {
       throw error;
     }
