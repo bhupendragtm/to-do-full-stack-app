@@ -24,7 +24,6 @@ app.post("/todos", (request, response) => {
         throw error;
       }
       return response.status(200).json(results);
-      console.log(results);
     }
   );
 });
@@ -79,7 +78,7 @@ app.delete("/todos/:id", (request, response) => {
     if (error) {
       throw error;
     }
-    console.log(results.rowCount + ` Deleted id is: ${id} ` + results.rowCount);
+    // console.log(results.rowCount + ` Deleted id is: ${id} ` + results.rowCount);
     response.status(200).send(`Blog deleted with name TITLE: '${id}'   `);
   });
 });
